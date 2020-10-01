@@ -1,0 +1,46 @@
+1、介绍WebGL基础
+    一句话总结:WebGL是在浏览器中实现三维效果的一套规范。
+    使用WebGL原生的API来写3D程序是一件非常痛苦的事情，幸好有很多同行花业余时间写了一些WebGL开源框架，其中Three.js就非常优秀的一个
+2、介绍WebGL中的开源库Three.js
+    什么是Three.js，很简单，你将它理解成Three+js就可以了。Three表示3D的意思，js表示javascript的意思，那么合起来，three.js就是使用
+ javascript来写3D程序的意思
+    javascript是在网页端的脚本语言，那么毫无疑问Three.js也是运行在浏览器上的
+    2.1、javascript能写高效的3D程序吗？
+    2.2、javascript不是在浏览器上运行的吗，那么怎么能写3D程序呢？ 
+3、Threejs能做什么
+    Threejs能写出在浏览器上流畅运行的3D程序
+4、Threejs源自何方
+    它源自github一个开源项目，发展相当迅速
+    https://github.com/mrdoob/three.js
+5、剖析源目录结构
+    要了解事物的真相，就要解析到它的深处去，我们来看看Three.js的源目录结果
+    Build目录：包含两个文件，three.js 和three.min.js 。这是three.js最终被引用的文件。一个已经压缩，一个没有压缩的js文件。
+    Docs目录：这里是three.js的帮助文档，里面是各个函数的api，可惜并没有详细的解释。试图用这些文档来学会three.js是不可能的。
+    Editor目录：一个类似3D-max的简单编辑程序，它能创建一些三维物体。
+    Examples目录：一些很有趣的例子demo，可惜没有文档介绍。对图像学理解不深入的同学，学习成本非常高。
+    Src目录：源代码目录，里面是所有源代码。
+    Test目录：一些测试代码，基本没用。
+    Utils目录：存放一些脚本，python文件的工具目录。例如将3D-Max格式的模型转换为three.js特有的json模型。
+    .gitignore文件：git工具的过滤规则文件，没有用。
+    CONTRIBUTING.md文件：一个怎么报bug，怎么获得帮助的说明文档。
+    LICENSE文件：版权信息。
+    README.md文件：介绍three.js的一个文件，里面还包含了各个版本的更新内容列表。
+6、配置你的开发环境
+    6.1、浏览器需要支持WebGL
+        Threejs本质上是WebGL，如果你的浏览器不支持WebGL，那么肯定你就不能完整的运行Three.js。支持WebGL的浏览器很多，例如Chrome、FireFox
+    6.2、javascript用什么工具开发比较好
+    6.3、Three.js怎么调试
+
+    //验证Three.js的版本 
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    <style>canvas { width: 100%; height: 100% }</style>
+    </head>
+    <body>
+        <script src="https://raw.github.com/mrdoob/three.js/master/build/three.js"></script>
+    </body>
+    </html> 
+
+      这样，这说明Three.js确实运行起来了。实践永远出真知
